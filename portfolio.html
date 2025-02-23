@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	   <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio - Meg Klotz Tattoos</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/portfolio.css">
+        <link rel="stylesheet" href="css/global.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    </head>
+    <body>
+    	<!--Navigation Menu -->
+        <nav>
+            <div class="menu">
+                <div class="logo">
+                    <a href="home.html"> MegKlotzTattoos </a>
+                </div>
+                <ul>
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#portfolio.html">Portfolio</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                    <li> <a href="aftercare.html">AfterCare</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="portfolio">
+            <div class="portfolio-header">
+                <h2>Portfolio</h2>
+            </div>
+            <div class="portfolio-container">
+                <div class="grid-container">
+                    <img src="images/portfolio_image_1.jpg" alt="Image 1" class="grid-item" onclick="openModal(this)">
+                    <img src="images/portfolio_image_2.jpg" alt="Image 2" class="grid-item" onclick="openModal(this)">
+                    <img src="images/portfolio_image_3.jpg" alt="Image 3" class="grid-item" onclick="openModal(this)">
+                    <img src="images/portfolio_image_4.jpg" alt="Image 4" class="grid-item" onclick="openModal(this)">
+                    <img src="images/portfolio_image_5.jpg" alt="Image 5" class="grid-item" onclick="openModal(this)">
+                    <img src="images/portfolio_image_6.jpg" alt="Image 6" class="grid-item" onclick="openModal(this)">
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Modal -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="expandedImg">
+        </div>
+
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-box">
+                    <h4>About</h4>
+                    <p>We are a new business providing quality services and products. Feel free to contact us for more information.</p>
+                </div>
+                <div class="footer-box">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#contact">Email Us</a></li>
+                        <li><a href="#about">Learn More About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h4>Follow Me on Social</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/meggiepokes/" target="_blank">Instagram</a>
+                        <a href="https://www.facebook.com/yourusername" target="_blank">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Your Business Name. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </body>
+    <script src="portfolio_page.js"></script>
+
+</html>
