@@ -29,6 +29,22 @@ nav .menu{
     padding: 0 20px;
 }
 
+@media (max-width: 768px) {
+    nav .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu ul li {
+        margin: 5px 0;
+    }
+}
+
 .menu .logo a{
     text-decoration: none;
     font-family: 'Gill Sans';
