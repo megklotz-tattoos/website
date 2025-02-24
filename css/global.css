@@ -30,41 +30,19 @@ nav .menu{
 }
 
 
-/* For mobile responsiveness */
 @media (max-width: 768px) {
-    .hamburger {
-        display: block; /* Show hamburger icon */
-        cursor: pointer;
-    }
-
-    .hamburger div {
-        width: 25px;
-        height: 3px;
-        background-color: black;
-        margin: 5px;
-    }
-
-    /* Hide menu items by default on mobile */
-    ul {
-        display: none;
-        list-style-type: none;
-    }
-
-    /* Show the menu when the "open" class is added */
-    .menu.open ul {
-        display: block;
-        background-color: #333; /* or your preferred color */
-    }
-
-    ul li {
-        padding: 10px;
+    nav .menu {
+        flex-direction: column;
         text-align: center;
     }
 
-    ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu ul li {
+        margin: 5px 0;
     }
 }
 

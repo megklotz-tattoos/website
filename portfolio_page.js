@@ -10,7 +10,4 @@ function closeModal() {
     document.getElementById("imageModal").style.display = "none";
 }
 
-function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('open');
-}
+
