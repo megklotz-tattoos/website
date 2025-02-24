@@ -36,7 +36,7 @@ nav .menu{
     }
 
     .menu ul {
-        flex-direction: column;
+        flex-direction: row ;
         width: 100%;
     }
 
