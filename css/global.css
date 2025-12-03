@@ -31,30 +31,53 @@ nav .menu{
 
 
 @media (max-width: 768px) {
+    /* --- FIX: Navigation Menu - Make it compact and side-by-side --- */
+    nav {
+        padding: 8px 0; /* A bit more vertical padding than default 4px for better contrast */
+    }
     nav .menu {
+        flex-direction: row; /* Keep logo and links side-by-side */
+        justify-content: space-between; /* Space out the logo and the links list */
+        align-items: center;
+        padding: 0 10px;
+    }
+    .menu .logo a {
+        font-size: 28px; /* Slightly smaller logo */
+    }
+    .menu ul {
+        flex-direction: row; /* Keep links side-by-side */
+        flex-wrap: wrap; /* Allows wrapping if links don't fit (safer) */
+        justify-content: flex-end; /* Push links to the right */
+        width: auto;
+        margin: 0; /* Remove potential default margins */
+    }
+    .menu ul li {
+        margin: 0 2px; /* Reduce margin between links */
+    }
+    .menu ul li a {
+        padding: 5px 8px; /* Reduced link padding to ensure they all fit */
+        font-size: 14px; /* Smaller font size to ensure they fit */
+    }
+
+    /* --- FIX: Content Blocking Issue (Applies to portfolio.html and aftercare.html) --- */
+    /* This rule pushes all main sections down to clear the fixed nav bar */
+    body > section, body > div:not(.menu) {
+        /* Nav is now much shorter (~60px), so 60px padding will clear it */
+        padding-top: 60px; 
+    }
+    /* Exclude the index page's first section because it will be handled in home.css */
+    #portfolio {
+        padding-top: 0; 
+    }
+
+    /* --- Existing Footer Rules (Keep these) --- */
+    .footer-container {
         flex-direction: column;
         text-align: center;
     }
 
-    .menu ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .menu ul li {
-        margin: 5px 0;
-    }
-
-    /* Universal padding for all content sections on mobile */
-    /* This ensures content starts below the fixed navbar (approx. 90px tall) */
-    body > section, body > div:not(.menu) {
-        padding-top: 90px; 
-    }
-    
-    /* Exclude the index page's first section (#portfolio) 
-       because it's handled separately in home.css */
-    #portfolio {
-        padding-top: 0; 
+    .footer-box {
+        min-width: 100%;
     }
 }
 
