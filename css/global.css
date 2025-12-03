@@ -1,4 +1,3 @@
-
 body, html {
     font-family: 'Poppins', sans-serif;
     height: 100%;
@@ -29,57 +28,6 @@ nav .menu{
     padding: 0 20px;
 }
 
-
-@media (max-width: 768px) {
-    /* --- FIX: Navigation Menu - Make it compact and side-by-side --- */
-    nav {
-        padding: 8px 0; /* A bit more vertical padding than default 4px for better contrast */
-    }
-    nav .menu {
-        flex-direction: row; /* Keep logo and links side-by-side */
-        justify-content: space-between; /* Space out the logo and the links list */
-        align-items: center;
-        padding: 0 10px;
-    }
-    .menu .logo a {
-        font-size: 28px; /* Slightly smaller logo */
-    }
-    .menu ul {
-        flex-direction: row; /* Keep links side-by-side */
-        flex-wrap: wrap; /* Allows wrapping if links don't fit (safer) */
-        justify-content: flex-end; /* Push links to the right */
-        width: auto;
-        margin: 0; /* Remove potential default margins */
-    }
-    .menu ul li {
-        margin: 0 2px; /* Reduce margin between links */
-    }
-    .menu ul li a {
-        padding: 5px 8px; /* Reduced link padding to ensure they all fit */
-        font-size: 14px; /* Smaller font size to ensure they fit */
-    }
-
-    /* --- FIX: Content Blocking Issue (Applies to portfolio.html and aftercare.html) --- */
-    /* This rule pushes all main sections down to clear the fixed nav bar */
-    body > section, body > div:not(.menu) {
-        /* Nav is now much shorter (~60px), so 60px padding will clear it */
-        padding-top: 60px; 
-    }
-    /* Exclude the index page's first section because it will be handled in home.css */
-    #portfolio {
-        padding-top: 0; 
-    }
-
-    /* --- Existing Footer Rules (Keep these) --- */
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-box {
-        min-width: 100%;
-    }
-}
 
 .menu .logo a{
     text-decoration: none;
@@ -129,13 +77,6 @@ nav .menu{
     flex-wrap: wrap;
     gap: 30px;
     padding: 0 20px;
-}
-
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
 }
 
 .footer-box {
@@ -202,5 +143,67 @@ nav .menu{
 
 .footer-bottom p {
     color: #bbb;
+}
 
+/* --- CORRECTED RESPONSIVE STYLES FOR MOBILE (MAX-WIDTH: 768PX) --- */
+@media (max-width: 768px) {
+    /* FIX 1: Navigation Menu - Make it compact and side-by-side */
+    nav {
+        padding: 8px 0;
+    }
+    
+    /* Keep the logo and links list on a single row */
+    nav .menu {
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center;
+        padding: 0 10px;
+    }
+    
+    .menu .logo a {
+        font-size: 24px; /* Smaller logo/brand text */
+    }
+    
+    /* Keep the navigation links on a single row */
+    .menu ul {
+        flex-direction: row;
+        flex-wrap: wrap; 
+        justify-content: flex-end; 
+        width: auto;
+        margin: 0; 
+    }
+    
+    .menu ul li {
+        margin: 0 2px;
+    }
+    
+    .menu ul li a {
+        padding: 5px 8px; /* Reduced link padding */
+        font-size: 14px; /* Smaller font size for links */
+    }
+
+    /* FIX 2: Content Blocking Issue (Applies to all content sections) */
+    /* This rule pushes content down to clear the fixed nav bar */
+    body > section, body > div:not(.menu) {
+        padding-top: 60px; 
+    }
+    /* Exclude the index page's first section (carousel) from this padding */
+    #portfolio {
+        padding-top: 0; 
+    }
+
+    /* Existing Footer Rules: ensures footer stacks vertically */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-box {
+        min-width: 100%;
+    }
+    
+    /* Center social links in the footer */
+    .social-links {
+        justify-content: center;
+    }
 }
