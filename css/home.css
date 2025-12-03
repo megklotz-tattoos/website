@@ -275,6 +275,101 @@
 }
 
 
+/* --- RESPONSIVE STYLES FOR MOBILE (MAX-WIDTH: 768PX) --- */
+@media (max-width: 768px) {
+    /* General Container & Spacing Adjustments */
+    /* Reduce large fixed margins and use smaller, consistent padding */
+    .about-container,
+    .instagram-portfolio,
+    .contact,
+    .portfolio {
+        margin-right: 0;
+        margin-left: 0;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .portfolio {
+        padding-top: 20px; 
+        margin-top: 70px; /* Push content down past the fixed navbar */
+    }
 
+    /* CAROUSEL */
+    .carousel {
+        height: 300px; /* Reduce the height on mobile */
+    }
+    .arrow {
+        font-size: 1.5rem; /* Smaller arrow size */
+        padding: 8px;
+    }
+
+    /* ABOUT SECTION */
+    .about-box {
+        padding: 25px; 
+        width: 100%; 
+        max-width: none; 
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+    /* INSTAGRAM GALLERY SECTION */
+    .instagram-portfolio {
+        /* Remove horizontal padding used for large screens */
+        padding-right: 0;
+        padding-left: 0;
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+    .instagram-portfolio h2 {
+        font-size: 2.5rem; 
+        margin-bottom: 20px;
+        padding-left: 20px; /* Re-add padding to header for alignment */
+    }
+    /* Disable JS scrolling and enable native CSS scrolling */
+    .instagram-gallery-container {
+        width: 100%;
+        overflow-x: auto; /* Enable native horizontal scrolling */
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch; 
+    }
+    .instagram-gallery {
+        flex-wrap: nowrap; /* Essential to keep images in a single row */
+        display: inline-flex; /* Use inline-flex to calculate required width */
+        gap: 10px;
+        padding-left: 20px; /* Match section padding */
+        padding-right: 20px;
+    }
+    .instagram-gallery img {
+        width: 150px; /* Reduce image size for mobile */
+        height: 150px;
+    }
+    .scroll-left,
+    .scroll-right {
+        display: none; /* Hide the JS scroll buttons, use native scrolling */
+    }
+    
+    /* CONTACT SECTION */
+    .contact {
+        flex-direction: column; /* Stack the form and info boxes */
+        gap: 20px; 
+    }
+    .Contact-form-box {
+        width: 100%; 
+        order: 2; /* Form second */
+    }
+    .Contact-form-box h2 {
+        font-size: 2.5rem; 
+    }
+    .contact-form-field {
+        width: 100%; /* Full width inputs */
+    }
+    .Contact-info {
+        max-width: 100%;
+        margin-bottom: 0; 
+        order: 1; /* Info box first */
+    }
+    .Contact-info h2 {
+        font-size: 2.5rem; 
+    }
+}
 
 
