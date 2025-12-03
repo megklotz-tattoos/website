@@ -44,6 +44,18 @@ nav .menu{
     .menu ul li {
         margin: 5px 0;
     }
+
+    /* Universal padding for all content sections on mobile */
+    /* This ensures content starts below the fixed navbar (approx. 90px tall) */
+    body > section, body > div:not(.menu) {
+        padding-top: 90px; 
+    }
+    
+    /* Exclude the index page's first section (#portfolio) 
+       because it's handled separately in home.css */
+    #portfolio {
+        padding-top: 0; 
+    }
 }
 
 .menu .logo a{
