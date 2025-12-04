@@ -9,5 +9,3 @@ function openModal(imgElement) {
 function closeModal() {
     document.getElementById("imageModal").style.display = "none";
 }
-
--
