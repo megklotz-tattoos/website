@@ -1,0 +1,141 @@
+/* --- Aftercare Page Styles (aftercare.css) --- */
+
+/* Main Aftercare Section Container */
+.aftercare-guide {
+    /* Use padding to push content down past the fixed navigation bar */
+    padding-top: 100px;
+    padding-bottom: 60px;
+    /* Match the container width/margin of other sections like portfolio */
+    margin-right: 30px;
+    margin-left: 30px;
+    color: #333; /* Dark text for readability on a light background */
+    background-color: #f9f9f9; /* Off-white background for the guide box */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 60px;
+}
+
+/* Header Styling */
+.aftercare-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.aftercare-header h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Individual Care Section Styling */
+.care-section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: #ffffff; /* White background for contrast */
+    border-left: 5px solid #eb4d55; /* Use accent color for a visual indicator */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.care-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #eb4d55; /* Accent color for section headings */
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* List of Care Points */
+.care-points {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.care-points li {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Custom Checkmark/Icon for List Items */
+.care-points li::before {
+    content: "✔️"; /* Checkmark or suitable icon */
+    color: #000; /* Color for the icon */
+    font-size: 1.2rem;
+    margin-right: 15px;
+    line-height: 1.6;
+}
+
+.care-points li:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+/* Important Note Box */
+.note-box {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #fff0f0; /* Very light pink/red background */
+    border: 1px solid #eb4d55;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.note-box h3 {
+    font-size: 1.5rem;
+    color: #eb4d55;
+    margin-top: 0;
+}
+
+.note-box p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* --- RESPONSIVE STYLES FOR MOBILE (MAX-WIDTH: 768PX) --- */
+@media (max-width: 768px) {
+    /* General Container & Header Adjustments */
+    .aftercare-guide {
+        margin-right: 0;
+        margin-left: 0;
+        padding: 30px 20px; /* Reduced padding on mobile */
+        /* Since global.css handles padding-top on mobile, we can reduce it here */
+        padding-top: 40px; 
+    }
+
+    .aftercare-header h1 {
+        font-size: 2.5rem; /* Smaller header on mobile */
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .care-section {
+        padding: 20px;
+    }
+
+    .care-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .care-points li {
+        font-size: 1rem;
+    }
+
+    .note-box {
+        margin-top: 30px;
+        padding: 20px;
+    }
+}
