@@ -5,7 +5,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 	//initialize EmailJS
-	emailjs.init("M-SQkbLTJ2-icaQoI");
+	emailjs.init("NHNe8cOCjbqbVTk4K");
 	document.getElementById("contact-form").addEventListener("submit", function(event) {
 		event.preventDefault();
 
